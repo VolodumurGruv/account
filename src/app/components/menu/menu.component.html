@@ -1,1 +1,20 @@
-<p>menu works!</p>
+<section class="side-menu">
+  <mat-drawer-container autosize>
+    <mat-drawer #drawer mode="side">
+      <mat-list *ngFor="let item of menu">
+        <mat-list-item>
+          <a
+            routerLink="/{{ item.toLowerCase().split(' ').join('') }}"
+            routerLinkActive="active"
+            ariaCurrentWhenActive="page"
+            >{{ item }}</a
+          >
+        </mat-list-item>
+      </mat-list>
+    </mat-drawer>
+
+    <button mat-icon-button (click)="drawer.toggle()">
+      <mat-icon>menu</mat-icon>
+    </button>
+  </mat-drawer-container>
+</section>

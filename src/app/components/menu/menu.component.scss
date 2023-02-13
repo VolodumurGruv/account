@@ -1,0 +1,28 @@
+.side-menu {
+  position: absolute;
+  width: 35%;
+  height: 100%;
+  background-color: transparent;
+
+  &__drawer {
+    width: auto;
+  }
+}
+
+.mat-toolbar {
+  background-color: transparent;
+}
+
+.mat-icon {
+  color: #fff;
+}
+
+.mat-drawer-container {
+  height: 100%;
+  background-color: transparent;
+}
+.mat-drawer {
+  overflow: hidden;
+  color: #fff;
+  background-color: rgba(0, 0, 0, 0.35);
+}

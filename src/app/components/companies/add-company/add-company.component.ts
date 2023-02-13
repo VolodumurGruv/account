@@ -5,9 +5,7 @@ import { CommonModule } from '@angular/common';
   selector: 'app-make-company',
   standalone: true,
   imports: [CommonModule],
-  templateUrl: './make-company.component.html',
-  styleUrls: ['./make-company.component.scss']
+  templateUrl: './add-company.component.html',
+  styleUrls: ['./add-company.component.scss'],
 })
-export class MakeCompanyComponent {
-
-}
+export class AddCompanyComponent {}
