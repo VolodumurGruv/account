@@ -22,6 +22,4 @@ import { MatListModule } from '@angular/material/list';
   templateUrl: './menu.component.html',
   styleUrls: ['./menu.component.scss'],
 })
-export class MenuComponent {
-  public menu: string[] = ['Bills', 'Companies', 'Add a company', 'Company'];
-}
+export class MenuComponent {}

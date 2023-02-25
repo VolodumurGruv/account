@@ -1,1 +1,89 @@
-<p>make-company works!</p>
+<section class="addcompany">
+  <h3>Додати компанію</h3>
+
+  <form
+    [formGroup]="companyForm"
+    (ngSubmit)="onSubmit()"
+    class="addcompany-form"
+  >
+    <div>
+      <mat-form-field>
+        <mat-label>Назва компанії</mat-label>
+        <input matInput type="text" formControlName="name" />
+
+        <mat-error *ngIf="name?.errors?.['required']"
+          >Необхідно вказати назву компанії</mat-error
+        >
+        <mat-error *ngIf="name?.errors?.['minlength']"
+          >Назва компанії має містити не менше 5-ти символів</mat-error
+        >
+      </mat-form-field>
+    </div>
+    <div>
+      <mat-form-field>
+        <mat-label>Номер рахунку</mat-label>
+        <input matInput type="text" formControlName="account" />
+        <mat-error *ngIf="account?.errors?.['required']"
+          >Це поле не може бути порожнім</mat-error
+        >
+        <mat-error
+          *ngIf="account?.errors?.['maxlength'] || account?.errors?.['minlength']"
+          >Має містити 29 символів</mat-error
+        >
+        <mat-error *ngIf="account?.errors?.['pattern']"
+          >Має містити лише UA на початку потім лише цифри</mat-error
+        >
+      </mat-form-field>
+    </div>
+    <div>
+      <mat-form-field>
+        <mat-label>ЄДРПОУ</mat-label>
+        <input matInput type="text" formControlName="EDRPOU" />
+        <mat-error *ngIf="EDRPOU?.errors?.['required']"
+          >Це поле не може бути порожнім</mat-error
+        >
+        <mat-error
+          *ngIf="EDRPOU?.errors?.['maxlength'] || EDRPOU?.errors?.['minlength']"
+          >Має містити 8 цифр</mat-error
+        >
+        <mat-error *ngIf="EDRPOU?.errors?.['pattern']"
+          >Має містити лише цифри</mat-error
+        >
+      </mat-form-field>
+    </div>
+    <div>
+      <mat-form-field>
+        <mat-label>ІПН</mat-label>
+        <input matInput type="text" formControlName="IPN" />
+        <mat-error *ngIf="IPN?.errors?.['required']"
+          >Це поле не може бути порожнім</mat-error
+        >
+        <mat-error
+          *ngIf="IPN?.errors?.['maxlength'] || IPN?.errors?.['minlength']"
+          >Має містити 12 цифр</mat-error
+        >
+        <mat-error *ngIf="IPN?.errors?.['pattern']"
+          >Має містити лише цифри</mat-error
+        >
+      </mat-form-field>
+    </div>
+    <div>
+      <button
+        class="buttons-group"
+        mat-raised-button
+        type="submit"
+        [disabled]="!companyForm.valid"
+      >
+        Додати
+      </button>
+      <button
+        class="buttons-group"
+        mat-raised-button
+        type="button"
+        (click)="clear()"
+      >
+        Очистити
+      </button>
+    </div>
+  </form>
+</section>

@@ -1,13 +1,37 @@
 <section class="side-menu">
   <mat-drawer-container autosize>
     <mat-drawer #drawer mode="side">
-      <mat-list *ngFor="let item of menu">
+      <mat-list>
         <mat-list-item>
           <a
-            routerLink="/{{ item.toLowerCase().split(' ').join('') }}"
+            routerLink="/bills"
             routerLinkActive="active"
             ariaCurrentWhenActive="page"
-            >{{ item }}</a
+            >Рахунки</a
+          >
+        </mat-list-item>
+        <mat-list-item>
+          <a
+            routerLink="/companies"
+            routerLinkActive="active"
+            ariaCurrentWhenActive="page"
+            >Компанії</a
+          >
+        </mat-list-item>
+        <mat-list-item>
+          <a
+            routerLink="/companies/addacompany"
+            routerLinkActive="active"
+            ariaCurrentWhenActive="page"
+            >Додати Компанію</a
+          >
+        </mat-list-item>
+        <mat-list-item>
+          <a
+            routerLink="/companies/company"
+            routerLinkActive="active"
+            ariaCurrentWhenActive="page"
+            >Компанія</a
           >
         </mat-list-item>
       </mat-list>

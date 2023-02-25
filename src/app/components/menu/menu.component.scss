@@ -1,11 +1,15 @@
 .side-menu {
   position: absolute;
-  width: 35%;
   height: 100%;
   background-color: transparent;
 
   &__drawer {
     width: auto;
+  }
+
+  a {
+    text-decoration: none;
+    color: white;
   }
 }
 
@@ -25,4 +29,8 @@
   overflow: hidden;
   color: #fff;
   background-color: rgba(0, 0, 0, 0.35);
+}
+
+.active {
+  padding: 5px;
 }
