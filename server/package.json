@@ -1,0 +1,27 @@
+{
+  "name": "accounting-server",
+  "version": "1.0.0",
+  "description": "server MYSQL",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/VolodumurGruv/account.git#server"
+  },
+  "keywords": [
+    "accounting",
+    "server"
+  ],
+  "author": "Grushka Volodumur",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/VolodumurGruv/account/issues"
+  },
+  "homepage": "https://github.com/VolodumurGruv/account/tree/server#readme",
+  "dependencies": {
+    "dotenv": "^16.0.3",
+    "mysql": "^2.18.1"
+  }
+}

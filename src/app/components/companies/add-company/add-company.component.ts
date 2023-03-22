@@ -4,6 +4,7 @@ import { MatInputModule } from '@angular/material/input';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { FormBuilder, ReactiveFormsModule, Validators } from '@angular/forms';
 import { MatButtonModule } from '@angular/material/button';
+import { AddCompanyService } from 'src/app/services/add-company.service';
 
 @Component({
   selector: 'app-make-company',
@@ -63,13 +64,18 @@ export class AddCompanyComponent implements OnInit {
     return this.companyForm.get('IPN');
   }
 
-  constructor(private fb: FormBuilder) {}
+  constructor(private fb: FormBuilder, private addCompany: AddCompanyService) {}
 
   ngOnInit(): void {}
 
   onSubmit() {
     console.log(this.companyForm.value);
-    this.companyForm.reset();
+
+    this.addCompany
+      .addCompany(this.companyForm.value)
+      .subscribe((res) => console.log(res));
+
+    // this.companyForm.reset();
   }
 
   clear() {
