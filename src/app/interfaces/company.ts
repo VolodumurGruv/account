@@ -3,4 +3,5 @@ export interface Company {
   account: string;
   EDRPOU: number;
   IPN: number;
+  company_id?: number;
 }

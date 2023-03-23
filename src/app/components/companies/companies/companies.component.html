@@ -1,3 +1,11 @@
 <section class="companies">
   <h2>Companies</h2>
+  <div class="cards">
+    <mat-card *ngFor="let company of companies">
+      <app-company-item [company]="company"></app-company-item>
+      <mat-card-actions>
+        <button mat-button (click)="showCompany(company.IPN)">More</button>
+      </mat-card-actions>
+    </mat-card>
+  </div>
 </section>

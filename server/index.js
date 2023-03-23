@@ -5,3 +5,4 @@ const {
 } = require("./modules/mysqllConnection");
 
 runServer();
+startConnection();

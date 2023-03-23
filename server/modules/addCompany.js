@@ -5,8 +5,6 @@ const {
 } = require("./mysqllConnection");
 
 module.exports = (company) => {
-  startConnection();
-
   const { name, account, EDRPOU, IPN } = company;
 
   console.log(company);
@@ -28,5 +26,4 @@ module.exports = (company) => {
       console.log(`Company was added`);
     }
   );
-  endConnection();
 };

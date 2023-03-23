@@ -1,0 +1,15 @@
+.cards {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  color: black;
+}
+
+mat-card {
+  box-shadow: 5px 5px 5px grey;
+}
+
+mat-card-actions {
+  display: flex;
+  justify-content: space-around;
+}

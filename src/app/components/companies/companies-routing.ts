@@ -13,7 +13,7 @@ export const COMPANIES_ROUTES: Route[] = [
     component: AddCompanyComponent,
   },
   {
-    path: 'company',
+    path: 'company/:id',
     component: CompanyComponent,
   },
 ];

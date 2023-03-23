@@ -10,7 +10,6 @@ module.exports = () => {
       "Access-Control-Allow-Origin": "*",
       "Content-Type": "text/html, application/json",
     });
-
     if (req.url !== "/favicon.ico") {
       url = req.url;
     }
@@ -19,7 +18,6 @@ module.exports = () => {
       try {
         const companies = await routes[url]();
 
-        console.log(companies);
         res.end(JSON.stringify(companies));
       } catch (error) {
         console.error(error);
@@ -36,6 +34,10 @@ module.exports = () => {
       });
 
       res.end(JSON.stringify({ message: "Added successfuly" }));
+    } else if (url.includes("company")) {
+      const company = await routes["/company"](url.slice(-12));
+
+      res.end(JSON.stringify(company));
     } else {
       res.end("Main page");
     }

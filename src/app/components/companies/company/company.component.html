@@ -1,1 +1,27 @@
-<p>company works!</p>
+<section class="company">
+  <div class="cards">
+    <mat-card *ngFor="let comp of company">
+      <app-company-item [company]="comp"></app-company-item>
+      <mat-card-actions>
+        <button mat-raised-button (click)="companyBills(comp.IPN)">
+          Bills
+        </button>
+
+        <button
+          mat-raised-button
+          color="accent"
+          (click)="editCompany(comp.IPN)"
+        >
+          Edit
+        </button>
+        <button
+          mat-raised-button
+          color="warn"
+          (click)="deleteCompany(comp.IPN)"
+        >
+          Delete
+        </button>
+      </mat-card-actions>
+    </mat-card>
+  </div>
+</section>

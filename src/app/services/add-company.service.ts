@@ -14,6 +14,10 @@ export class AddCompanyService {
     return this.http.get(`${this.url}/`);
   }
 
+  getCompany(ipn: number): Observable<any> {
+    return this.http.get(`${this.url}/company/${ipn}`);
+  }
+
   addCompany(company: any): Observable<any> {
     return this.http.post(`${this.url}/addcompany`, JSON.stringify(company));
   }
