@@ -38,6 +38,16 @@ module.exports = () => {
       const company = await routes["/company"](url.slice(-12));
 
       res.end(JSON.stringify(company));
+    } else if (url.includes("delete")) {
+      let ipn = 0;
+
+      req.on("data", (data) => {
+        ipn = JSON.parse(data);
+      });
+      req.on("end", () => {
+        routes["/delete"](ipn);
+      });
+      res.end(JSON.stringify({ message: "Deleted successfuly" }));
     } else {
       res.end("Main page");
     }

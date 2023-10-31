@@ -21,4 +21,8 @@ export class AddCompanyService {
   addCompany(company: any): Observable<any> {
     return this.http.post(`${this.url}/addcompany`, JSON.stringify(company));
   }
+
+  deleteCompany(ipn: number): Observable<any> {
+    return this.http.post(`${this.url}/delete`, JSON.stringify(ipn));
+  }
 }

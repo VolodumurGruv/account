@@ -32,7 +32,9 @@ export class CompanyComponent implements OnInit {
     }
   }
 
-  public deleteCompany(ipn: number) {}
+  public deleteCompany(ipn: number) {
+    this.comapnyService.deleteCompany(ipn).subscribe();
+  }
   public companyBills(ipn: number) {}
   public editCompany(ipn: number) {}
 }
