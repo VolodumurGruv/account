@@ -44,3 +44,5 @@ Thumbs.db
 # Server files
 /server/node_modules
 /server/.env
+
+/src/.env
